@@ -158,7 +158,7 @@ public class Grid {
 		Path2D.Double pathX = new Path2D.Double();
 		Path2D.Double pathY = new Path2D.Double();
 		
-		int centerX = (int) Panel.WIDTH / 2;
+		int centerX = (int) Panel.WIDTH / 2;//1. the reference point is always the middle
 		int centerY = (int) Panel.HEIGHT / 2;
 		
 		int numOfLinesH =(int)(Panel.WIDTH / dX);
@@ -168,10 +168,20 @@ public class Grid {
 		double rightDX = dX;
 		double lowDY = -dX;
 		double upDY = dX;
-		int startPointX = centerX + moveSide;
+		int startPointX = centerX + moveSide;//2. when some offset happens, the center moves to a certain place, at every point of repaint() the offset center is the point of reference
 		int startPointY = centerY+ moveUpDown;
-		centerX = startPointX % ((int) dX);
+		centerX = startPointX % ((int) dX);/*3. although the new center is at some side now, by adding the same distance dX back to it, at some point you still
+		 									get to the correct offset center, by adding lines, so that is why even though the center is not in the center anymore,
+		 									it still looks as if the scaling is in respect center, because due to it being the starting point of the calculation,
+		 									it remains wherever it would be if the drawing loop was actually at the center
+		 									!!! Despite the likely retarded way to do this what would be the center remains at the right place, 
+		 									that is why the scaleing looks fine*/
+		
+											
 		centerY = startPointY % ((int) dX);
+		
+
+		System.out.println("centerX = " + centerX);
 		
 		for(int x = 0; x <= numOfLinesH; x ++) {
 			
