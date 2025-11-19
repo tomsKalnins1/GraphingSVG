@@ -185,41 +185,41 @@ public class Grid {
 		
 		for(int x = 0; x <= numOfLinesH; x ++) {
 			
-			double lineStartH1 = centerX + (x * leftDX);
-			double lineStartH2 = centerX + (x * rightDX);
+//			double lineStartH1 = centerX + (x * leftDX);
+//			double lineStartH2 = centerX + (x * rightDX);
 			
-			if(lineStartH1 >= 0 && lineStartH1 <= Panel.WIDTH) {
-				pathX.moveTo(centerX + (x * leftDX), 0);
-				pathX.lineTo(centerX + (x * leftDX), Panel.HEIGHT);
-				lineH1 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:black;stroke-width:1\" />", (centerX + (x * leftDX)), 0, (centerX + (x * leftDX)), Panel.HEIGHT);				
-				gridH.add(lineH1);
-			}
-			if(lineStartH2 >= 0 && lineStartH2 <= Panel.WIDTH) {
+//			if(lineStartH1 >= 0 && lineStartH1 <= Panel.WIDTH) {
+//				pathX.moveTo(centerX + (x * leftDX), 0);
+//				pathX.lineTo(centerX + (x * leftDX), Panel.HEIGHT);
+//				lineH1 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:black;stroke-width:1\" />", (centerX + (x * leftDX)), 0, (centerX + (x * leftDX)), Panel.HEIGHT);				
+//				gridH.add(lineH1);
+//			}
+//			if(lineStartH2 >= 0 && lineStartH2 <= Panel.WIDTH) {
 				pathX.moveTo(centerX + (x * rightDX), 0);
 				pathX.lineTo(centerX + (x * rightDX), Panel.HEIGHT);
 				lineH2 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:black;stroke-width:1\" />", (centerX + (x * rightDX)), 0, (centerX + (x * rightDX)), Panel.HEIGHT);			
 				gridH.add(lineH2);
-			}
+//			}
 			g2d.setStroke(new BasicStroke(1.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL));
 			g2d.setColor(new Color(150, 150, 150));
 			g2d.draw(pathX);
 			if(x <= numOfLinesV) {
 				
-				double lineStartV1 = centerY + (x * lowDY);
-				double lineStartV2 = centerY + (x * upDY);
+//				double lineStartV1 = centerY + (x * lowDY);
+//				double lineStartV2 = centerY + (x * upDY);
 				
-				if(lineStartV1 >= 0 && lineStartV1 <= Panel.HEIGHT) {
-					pathY.moveTo(0, centerY + (x * lowDY));
-					pathY.lineTo(Panel.WIDTH, centerY + (x * lowDY));
-					lineV1 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:black;stroke-width:1\" />", 0, (centerY + (x * lowDY)), Panel.WIDTH, ( centerY + (x * lowDY)));
-					gridV.add(lineV1);
-				}
-				if(lineStartV2 >=0 && lineStartV2 <= Panel.HEIGHT) {
+//				if(lineStartV1 >= 0 && lineStartV1 <= Panel.HEIGHT) {
+//					pathY.moveTo(0, centerY + (x * lowDY));
+//					pathY.lineTo(Panel.WIDTH, centerY + (x * lowDY));
+//					lineV1 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:black;stroke-width:1\" />", 0, (centerY + (x * lowDY)), Panel.WIDTH, ( centerY + (x * lowDY)));
+//					gridV.add(lineV1);
+//				}
+//				if(lineStartV2 >=0 && lineStartV2 <= Panel.HEIGHT) {
 					pathY.moveTo(0, centerY + (x * upDY));
 					pathY.lineTo(Panel.WIDTH, centerY + (x * upDY));
 					lineV2 = String.format("<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" style=\"stroke:black;stroke-width:1\" />", 0, (centerY + (x * upDY)), Panel.WIDTH, (centerY + (x * upDY)));			
 					gridV.add(lineV2);
-				}
+//				}
 				g2d.setStroke(new BasicStroke(1.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL));
 				g2d.setColor(new Color(150, 150, 150));
 				g2d.draw(pathY);
