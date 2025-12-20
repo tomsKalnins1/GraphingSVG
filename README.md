@@ -14,9 +14,7 @@
 Due to operating systems not accepting all symbols in file names, like '*', '/' etc. they are denoted by the abbreviation their name, like
 "mult" for '*', "div" for '/'.
 </p>
-<p>
- The code is very messy and definitely has a lot of room for improvement, but it has proved itself useful for me at work when creating graphs for math text books.
-</p>
+
 
 
 
