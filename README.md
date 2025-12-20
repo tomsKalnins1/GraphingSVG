@@ -1,5 +1,5 @@
 
-  **Trace function grap with Bezier curves**
+  **Trace function graph with Bezier curves**
 
 <p>
   This is a graphical calculator that outputs the functions it draws in SVG format.
