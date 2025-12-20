@@ -15,7 +15,8 @@ Due to operating systems not accepting all symbols in file names, like '*', '/' 
 "mult" for '*', "div" for '/'.
 </p>
 <p>
-  The input is parsed with a basic recursive descent parser. This is the resource that I used to understand how it works ()
+ The code is very messy and definitely has a lot of room for improvement, but it has proved itself useful for me at work when creating graphs for math text books.
 </p>
+
 
 
