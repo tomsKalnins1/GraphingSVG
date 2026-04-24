@@ -8,7 +8,7 @@
   Each function and operation has class that extends a general Function class and each node of the tree belongs to one of Function subclasses. At each mouse
   scroll to zoom in or out the syntax tree is refreshed accordingly.
 
-  I totally have to rewrite most of the code because this is a total mess.
+  I totally have to rewrite most of the code and rename all the files because this is a total mess.
 
   ## Purpose
   When working with math books usually me or my colleagues had to draw them by hand, so as one of my beginner projects I wanted to automate
