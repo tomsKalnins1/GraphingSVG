@@ -1,5 +1,5 @@
 
-  **Trace function graph with Bezier curves**
+  ## Trace function graph with Bezier curves
   This is a graphical calculator that outputs the functions it draws in SVG format.
   The main mechanism for this is the implementation of Schneider’s algorithm for automatically fitting Bezier curves
   to a set of digitized points.
